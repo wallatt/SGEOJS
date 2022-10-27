@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/saludColectiva/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.themes.saludColectiva.name">Salud Colectiva</message>
+	<message key="plugins.themes.saludColectiva.description">A journal theme designed for Salud Colectiva.</message>
+	<message key="plugins.themes.saludColectiva.option.typography.montserrat_notoSerif">Montserrat/Noto Serif</message>
+	<message key="plugins.themes.saludColectiva.option.accentColour.label">Accent Colour</message>
+	<message key="plugins.themes.saludColectiva.search.resultsFor">Search</message>
+	<message key="plugins.themes.saludColectiva.search.params">Search Parameters</message>
+	<message key="plugins.themes.saludColectiva.userRole">User role</message>
+	<message key="plugins.themes.saludColectiva.readerAuthor">Reader - Author</message>
+</locale>

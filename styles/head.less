@@ -1,0 +1,262 @@
+/**
+ * @file plugins/themes/saludColectiva/styles/head.less
+ *
+ * Copyright (c) 2014-2018 Simon Fraser University Library
+ * Copyright (c) 2003-2018 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for the page header structural elements
+ *
+ */
+@font-face {
+  font-family: 'Baloo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Baloo Regular'), local('Baloo-Regular'), url(https://fonts.gstatic.com/s/baloo/v3/6xKhdSpJJ92I9MWPCm4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.pkp_head_wrapper,
+.has_site_logo .pkp_head_wrapper {
+	position: relative;
+	padding-top: 0;
+}
+
+.pkp_site_name_wrapper,
+.pkp_navigation_primary_row {
+	background: #ffffff;
+	padding-left: @triple;
+	padding-right: @triple;
+}
+
+.pkp_site_name_wrapper {
+	width: 100%;
+}
+
+.pkp_site_name {
+	//padding-top: @base + @half;
+	//padding-bottom: @base + @half;
+	@media(max-width: @screen-desktop) {
+		text-align: left;
+	}
+
+	.is_text {
+		margin-left: 110px;
+		font-size: 28px;
+		font-family: 'Open Sans';
+		color: #333333;
+		margin-bottom: 10px;
+		@media(max-width: @screen-tablet) {
+			margin-top: 20px;
+			margin-left: 6px;
+		}
+		@media(min-width: @screen-tablet) and (max-width: @screen-desktop) {
+			margin-top: 20px;
+			margin-left: 6px;
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+		width: 75%;
+		margin-left: 0;
+	}
+}
+
+.pkp_navigation_primary_row {
+	background: @bg;
+}
+
+.pkp_navigation_primary_wrapper {
+	width: auto;
+	@media(max-width: @screen-phone) {
+		display: block;
+		margin: 0;
+	}
+	@media(min-width: @screen-phone) and(max-width: @screen-tablet) {
+		display: block;
+		margin: auto;
+	}
+	
+}
+
+// Use the ID so that we override all styles in the base theme
+#navigationPrimary {
+
+	margin-left: 100px;
+	
+	@media(max-width: @screen-desktop) {
+		margin-left: 0px;
+		text-align: left;
+	}
+
+	a {
+		font-family: @font-heading;
+		font-size: @font-sml;
+		color: @text-light;
+		font-weight: @bold;
+		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			color: @bg-base;
+		}
+		
+		@media(max-width: @screen-tablet) {
+			font-size: 12px;
+			margin-left: 0px;
+		}
+	}
+
+	> li > a {
+		padding-bottom: 6px;
+		border-bottom-width: 4px;
+
+		&:hover,
+		&:focus {
+			border-color: @bg-base;
+		}
+	}
+
+	> [aria-haspopup] > a:hover,
+	> [aria-haspopup] > a:focus {
+		border-color: transparent;
+	}
+
+	ul {
+		background: @bg-base;
+
+		a {
+			color: @text-bg-base;
+
+			&:hover,
+			&:focus {
+				border-color: transparent;
+			}
+		}
+	}
+
+	[aria-expanded="true"]:before {
+		border-bottom-color: @bg-base;
+	}
+}
+
+.pkp_head_wrapper .pkp_search {
+
+	@media(min-width: @screen-desktop) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 40px;
+		min-width: 100px;
+		padding: 0;
+		font-size: 14px;
+		line-height: 20px;
+		transition: min-width .4s;
+		text-align: right;
+		overflow-x: hidden;
+	}
+	
+}
+
+.pkp_head_wrapper .pkp_search {
+
+	@media(min-width: @screen-desktop) {
+		top: 10px;
+		height: 50px;
+	}
+
+
+
+	.search_controls {
+	
+		color: #ffffff;
+	
+		display: inline;
+		@media(max-width: @screen-desktop) {
+			text-align: right;
+		}
+
+		.search_prompt {
+			padding-bottom: @base;
+			border-bottom: none;
+			font-family: @font-heading;
+			font-size: @font-sml;
+			font-weight: @bold;
+			text-transform: uppercase;
+			
+			@media(max-width: @screen-phone) {
+				margin-top: 10px;
+			}
+		}
+		
+		a {
+			color: @languagec;
+			text-transform: uppercase;
+			
+				&:hover{
+					color: @languagech;
+				}
+		}
+	}
+
+	&.is_open {
+		min-width: 50%;
+
+		input[type="text"] {
+			border-bottom: none;
+			background: @bg-light-shade;
+			border-left: @bg-border;
+		}
+
+		.search_controls {
+
+			.search_prompt {
+				background: @accent;
+				color: @text-bg-base;
+
+				&:hover,
+				&:focus {
+					border-bottom: transparent;
+				}
+
+				&:before {
+					color: @text-bg-base;
+				}
+			}
+			
+					
+			a {
+				text-transform: uppercase;
+			}
+		}
+
+	}
+}
+
+// Menus de Navegacion -> User Navigation Menu
+.pkp_navigation_user_wrapper {
+
+	a {
+		font-family: @font-heading;
+		font-size: @font-sml;
+		//color: @text-light;
+		color: #000000 !important;
+		font-weight: @bold;
+	}
+
+	ul a:hover,
+	ul a:focus {
+		border-color: @bg-base;
+	}
+
+	@media(min-width: @screen-desktop) {
+		top: 8px;
+		right: 0;
+		left: auto;
+
+		.pkp_navigation_user {
+			margin-right: 0;
+			padding-right: 0;
+			width: auto;
+		}
+	}
+}

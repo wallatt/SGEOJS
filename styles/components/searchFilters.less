@@ -1,0 +1,50 @@
+.search-filters {
+	padding: 1rem;
+	background: #f7f7f7;
+
+	h2 {
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		line-height: 1.6rem;
+		color: #757575;
+	}
+
+	label {
+		font-size: 0.9rem;
+		color: #757575;
+	}
+
+	.form-control {
+		background: transparent;
+	}
+
+	.form-control-date {
+		width: 35%;
+		display: flex;
+		justify-content: space-between;
+
+		> select {
+
+			&:first-child {
+				max-width: 6em;
+			}
+
+			&:nth-child(2) {
+				margin-left: 0.5em;
+				margin-right: 0.5em;
+			}
+
+			&:last-child {
+				max-width: 4em;
+			}
+		}
+	}
+
+	.form-group-buttons {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: 992px) {
+		padding: 2rem;
+	}
+}

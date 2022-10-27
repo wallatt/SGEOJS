@@ -73,19 +73,18 @@
 				</div><!-- pkp_site_name_wrapper -->
 
 				{* Primary site navigation *}
-				{if $currentContext}
+				{* {if $currentContext}
 					<nav class="pkp_navigation_primary_row" aria-label="{translate|escape key="common.navigation.site"}">
 						<div class="pkp_navigation_primary_wrapper">
 
-							{* Primary navigation menu for current application *}
 							{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
 
-							{* Search form *}
+							
 							{include file="frontend/components/searchForm_simple.tpl"}
 							
-						</div><!-- .pkp_navigation_primary_wrapper -->
+						</div>
 					</nav>
-				{/if}
+				{/if} *}
 				
 				{* Ingresar - Registrar - User Navigation Menu *}
 				

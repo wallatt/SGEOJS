@@ -14,7 +14,7 @@
  * @uses $currentTitleKey string Translation key for title of current page.
  *}
 
-<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
+{* <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
 	<ol>
 		<li>
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
@@ -32,4 +32,4 @@
 			</h1>
 		</li>
 	</ol>
-</nav>
+</nav> *}
